@@ -1,0 +1,109 @@
+<div class="news-container">
+
+<div class="user-name">
+    <h1>Welcome, {{ currUser.first_name }}</h1>
+</div>
+
+<div class="filter">
+    <input type="search" class="filter" [(ngModel)]="team" (ngModelChange)="ngOnInit()" placeholder="Search">
+    <!--
+    <mat-form-field appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+        <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+    
+    <input type="text" [(ngModel)]="startDate" (ngModelChange)="ngOnInit()">
+    <input type="text" [(ngModel)]="endDate" (ngModelChange)="ngOnInit()">
+    -->
+
+</div>
+
+<!--
+<mat-form-field class="date" appearance="fill">
+    <mat-label>Choose a Starting Date</mat-label>
+    <input matInput [matDatepicker]="startPicker" [(ngModel)]="startDate">
+    <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+    <mat-datepicker #startPicker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field class="date" appearance="fill">
+    <mat-label>Choose an Ending Date</mat-label>
+    <input matInput [matDatepicker]="endPicker" [(ngModel)]="endDate">
+    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+    <mat-datepicker #endPicker></mat-datepicker>
+</mat-form-field>
+
+
+<mat-form-field appearance="fill">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+      <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+</mat-form-field>
+
+<mat-form-field>
+    <input matInput
+        placeholder="Choose a date"
+        [satDatepicker]="picker"
+        [(ngModel)]="endDate">
+    <sat-datepicker #picker [rangeMode]="true"></sat-datepicker>
+    <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+</mat-form-field>
+-->
+
+
+
+
+
+<!--
+{{ startDate ? startDate: 0 }}
+{{ endDate }}
+-->
+<!--
+<ul *ngIf="news" class="news">
+    <li *ngFor="let article of news.articles">
+        <div class="article-tile" 
+            style="background-image: url({{ article.urlToImage }})"
+            routerLink="/article/{{ article.title }}"
+            (click)="changeArticle(article)">
+
+            <div class="link-container">
+                <a href="{{ article.url }}" target="_blank">Link</a>
+            </div>
+
+            <span class="title">{{ article.title }}</span> 
+
+        </div>
+    </li>
+</ul>
+-->
+
+
+<ul *ngIf="news" class="news">
+    <li *ngFor="let article of news.articles">
+        <app-article-preview [article]="article"></app-article-preview>
+    </li>
+</ul>
+
+<div class="page-toggle">
+    <div class="page-button">
+        <button (click)="prevPage(); ngOnInit()" [disabled]="page == 1">&#x2190; Previous Page</button>
+    </div>
+
+    <span>{{page}}</span>
+
+    <div class="page-button">
+        <button (click)="nextPage(); ngOnInit()" [disabled]="!news">Next Page &#x2192;</button>
+    </div>
+</div>
+
+</div>
+

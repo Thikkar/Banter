@@ -1,0 +1,82 @@
+GET http://localhost:3000/api/users
+
+###
+
+PATCH http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "original_username": "thikkar",
+    "first_name": "Karthik"
+}
+
+###
+
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "first_name": "Kirk",
+    "last_name": "Cousins",
+    "username": "asdfas",
+    "password": "asfdas",
+    "favTeam": "vikings"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "username": "naga07",
+    "password": "password2"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/6137e1ad68f0b111efd31ce6
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/articles
+
+
+###
+
+GET http://localhost:3000/api/articles/Las Vegas Raiders' Allegiant Stadium expected to host Super Bowl LVIII in 2024, sources say - ESPN India
+
+###
+
+POST http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+    "title": "Test Title 3",
+    "author": "Test Author 3",
+    "body": "Test Body 3"
+}
+
+###
+
+PATCH http://localhost:3000/api/articles
+Content-Type: application/json
+
+{
+    "title": "Test Title 3",
+    "comment": "Third Comment",
+    "username": "Test Username 3"
+}
+
+###
+
+// delete SINGLE article
+DELETE http://localhost:3000/api/articles/613f83a96faddcea74bb095f
+Content-Type: application/json
+
+###
+
+// delete ALL articles
+DELETE http://localhost:3000/api/articles
+Content-Type: application/json

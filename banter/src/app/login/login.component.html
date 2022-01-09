@@ -1,0 +1,33 @@
+
+<form action="/login" method="POST" class="login-container">
+    <div class="input">
+        <input type="text" 
+            id="username"   
+            name="username"
+            placeholder="Username" 
+            [(ngModel)]="username">
+    </div>
+
+    <div class="input">
+        <input [type]="showPass ? 'text' : 'password'" 
+            id="password" 
+            name="password" 
+            placeholder="Password" 
+            [(ngModel)]="password"
+            (ngModelChange)="authorize(username, password)"
+        >
+    </div>
+
+    <div class="show-pass">
+        <p>Show Password:</p> 
+        <input type="checkbox" (click)="showPassword()">
+    </div>
+
+    <div class="login-button">
+        <button (click)="authorize(username, password);" 
+                routerLink="{{ logInData.redirect }}">Log in</button>
+    </div>
+
+    <button routerLink="/register">Sign up</button>
+    
+</form>

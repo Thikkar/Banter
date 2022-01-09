@@ -1,0 +1,12 @@
+<div class="article-tile" 
+     style="background-image: url({{ article.urlToImage }})"
+     routerLink="/article/{{ article.title }}"
+     (click)="changeArticle(article)">
+
+    <div class="link-container">
+        <a href="{{ article.url }}" target="_blank">Link</a>
+    </div>
+
+    <span class="title">{{ article.title }}</span> 
+
+</div>

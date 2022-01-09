@@ -1,0 +1,18 @@
+<header>
+    <div [ngClass]="{'nav-container-scroll': isScrolled, 'nav-container-noscroll': !isScrolled}" (scroll)="onScroll()">
+      <nav>
+        <ul>
+          <div class="app-name">
+            <li>BANTER</li>
+          </div>
+          <div class="nav-buttons">
+            <li *ngIf="isLoggedIn"><a href="#" routerLink='/'>News</a></li>
+            <li *ngIf="isLoggedIn"><a href="#" routerLink='/profile'>Profile</a></li>
+            <li *ngIf="!isLoggedIn"><a href="#" routerLink='/login'>Login</a></li>
+            <li *ngIf="isLoggedIn" (click)="auth.logout()"><a href="#" routerLink='/login'>Logout</a></li>
+            {{isLoggedIn}}
+          </div>
+        </ul>
+      </nav>
+    </div>
+</header>

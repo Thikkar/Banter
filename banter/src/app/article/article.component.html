@@ -1,0 +1,46 @@
+
+<div class="article-container">
+
+    <div class="article-body">
+        <div class="title">
+            <strong>{{ article.title }}</strong>
+        </div>
+
+        <div class="author">
+            <strong>~ {{ article.author }}</strong>
+        </div>
+
+        <div class="article-img">
+            <img src="{{ article.image_url }}">
+        </div>
+
+        <div class="body">
+            <p>{{ article.body }}</p>
+            <p>*Full news content only available on paid production plan (NEWSAPI)*</p>
+            <p>View the full article <a href="{{ article.article_url }}" target="_blank">here</a></p>
+        </div>
+    </div>
+
+    <div class = "comment-field">
+        <p class="header">COMMENTS</p>
+
+        <div class="post">
+            <input [(ngModel)]="comment">
+            <button (click)="postComment(comment)">Post Comment</button>
+        </div>
+
+        <div class="comments">
+            <ul *ngIf="commentObjects">
+                <li *ngFor="let obj of commentObjects.reverse(); let i = index">
+                    <p class="username">{{ obj.username }}:</p>
+                    <p class="comment">{{ obj.comment }}</p> 
+                    <p class="time">{{ obj.time }}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="back-button">
+    <button routerLink="/">&#x2190; Back To News</button>
+</div>

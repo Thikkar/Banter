@@ -1,0 +1,45 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+        margin: 1em auto 0.5em auto;
+        transition: width 1.4s ease-in-out;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        transform: scale(1.0);
+        transition: transform 1.0s;
+    
+        :focus {
+            transform: scale(1.05);
+            transition: transform 0.5s;
+        }
+
+        input {
+            margin: 0.25em auto 0.25em auto;
+            width: 50%;
+            font-size: large;
+            border: 1px solid black;
+            border-radius: 6px;
+            padding: 12px 20px;
+        }
+    }
+
+    .show-pass {
+        display: flex;
+        flex-direction: row;
+    }
+
+    button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+}
