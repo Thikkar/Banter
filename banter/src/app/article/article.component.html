@@ -21,11 +21,13 @@
         </div>
     </div>
 
+    <div class="buffer"></div>
+
     <div class = "comment-field">
         <p class="header">COMMENTS</p>
 
         <div class="post">
-            <input [(ngModel)]="comment">
+            <textarea type="text" [(ngModel)]="comment"></textarea>
             <app-button-component [buttonName]="postCommentBtnName" (click)="postComment(comment)"></app-button-component>
         </div>
 

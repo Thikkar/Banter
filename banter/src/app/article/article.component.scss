@@ -4,17 +4,14 @@ $max-height: 675px;
     background: white;
     margin: 1%;
     display: flex;
-    flex-direction: column;
-    //resize: both;
+    flex-direction: row-reverse;
     
     padding: 3px;
-    //grid-gap: 3px;
     max-height: $max-height;
     
     .article-body {
-        //grid-area: nav;
-        //border: 3px dotted red;
-        resize: vertical;
+        grid-area: nav;
+        resize: horizontal;
         min-width: 50%;
         overflow-y: scroll;
 
@@ -60,18 +57,32 @@ $max-height: 675px;
         }
     }
 
+    .buffer {
+        width: 20px;
+        padding: 0;
+        // cursor: ew-resize;
+        flex: 0 0 auto;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 100%;
+            background: gray;
+            margin: 0 auto;
+        }
+    }
+ 
     .comment-field {
-        //grid-area: nav;
-        border-top: 2px solid gray;
-        //resize: vertical;
+        grid-area: nav;
+        resize: horizontal;
         overflow: auto;
-        //display: flex;
-        //flex-direction: column;
         margin-left: auto;
         margin-right: auto;
         
         min-height: 15%;
         width: 100%;
+        min-width: 200px;
 
         .header {
             font: xx-large;
@@ -85,10 +96,14 @@ $max-height: 675px;
             align-items: center;
             flex-direction: column;
 
-            input {
+            textarea {
                 border-radius: 1em;
                 font-size: large;
-                width: 50%;
+                width: 75%;
+                min-height: 35px;
+                max-height: 500px;
+                resize: vertical;
+                padding: 0.5rem;
             }
 
             button {
@@ -120,13 +135,19 @@ $max-height: 675px;
                     border-radius: 1em;
                     box-shadow: 2px 2px 1px #d3d3d3;
 
+                    .username {
+                        padding: 0.5rem 0 0 0.5rem;
+                    }
+
                     .comment {
+                        padding: 0 0.5rem 0 0.5rem;
                         display: flex;
                         justify-content: center;
                         font-weight: bold;
                     }
 
                     .time {
+                        padding: 0 0 0.5rem 0.5rem;
                         color: gray;
                         opacity: 0.5;
                     }
@@ -135,7 +156,6 @@ $max-height: 675px;
         }
 
         max-height: $max-height;
-        //max-width: 50vw;
     }    
 }
 
