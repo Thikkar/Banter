@@ -7,7 +7,7 @@
         </div>
 
         <div class="author">
-            <strong>~ {{ article.author }}</strong>
+            <strong *ngIf="article.author">~ {{ article.author }}</strong>
         </div>
 
         <div class="article-img">
@@ -26,7 +26,7 @@
 
         <div class="post">
             <input [(ngModel)]="comment">
-            <button (click)="postComment(comment)">Post Comment</button>
+            <app-button-component [buttonName]="postCommentBtnName" (click)="postComment(comment)"></app-button-component>
         </div>
 
         <div class="comments">
@@ -41,6 +41,4 @@
     </div>
 </div>
 
-<div class="back-button">
-    <button routerLink="/">&#x2190; Back To News</button>
-</div>
+<app-button-component [buttonName]="backBtnName" routerLink="/"></app-button-component>

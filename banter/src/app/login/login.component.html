@@ -14,7 +14,6 @@
             name="password" 
             placeholder="Password" 
             [(ngModel)]="password"
-            (ngModelChange)="authorize(username, password)"
         >
     </div>
 
@@ -23,11 +22,11 @@
         <input type="checkbox" (click)="showPassword()">
     </div>
 
-    <div class="login-button">
-        <button (click)="authorize(username, password);" 
-                routerLink="{{ logInData.redirect }}">Log in</button>
-    </div>
+    <app-button-component 
+        [buttonName]="logInBtnName" 
+        routerLink="{{ logInData.redirect }}"
+        (click)="authorize(username, password)">
+    </app-button-component>
+    <app-button-component [buttonName]="signUpBtnName" routerLink="/register"></app-button-component>
 
-    <button routerLink="/register">Sign up</button>
-    
 </form>

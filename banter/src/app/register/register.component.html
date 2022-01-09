@@ -51,7 +51,7 @@
     </select>
 
     <strong>{{ favTeam }}</strong>
-
+<!--
     <button class="signup-button"
             (click)="signUp(first_name, last_name, username, password, favTeam)"
             routerLink="/" 
@@ -62,5 +62,19 @@
                         || (!favTeam || favTeam === 'favorite-team') ">
         Sign Up
     </button>
+-->
+
+    <app-button-component 
+        [buttonName]="signUpBtnName"
+        (click)="signUp(first_name, last_name, username, password, favTeam)"
+        [disabled]="(!username || username==='') 
+                        || (!password || password==='') 
+                        || (!first_name || first_name==='')
+                        || (!last_name || last_name==='')
+                        || (!favTeam || favTeam === 'favorite-team') "
+    >
+    </app-button-component>
+
+    <app-button-component [buttonName]="backBtnName" routerLink="/login"></app-button-component>
 </form>
 

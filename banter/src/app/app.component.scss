@@ -71,9 +71,10 @@ nav {
                 padding: 1em;
                 transform: scale(0.95);
                 transition: background-color 1.0s ease, transform 1.0s;
+                border-radius: 0.5em;
 
                 &:hover {
-                    background-color: yellow;
+                    background-color: aqua;
                     position: relative;
                     transform: scale(1.05);
                     cursor: pointer;

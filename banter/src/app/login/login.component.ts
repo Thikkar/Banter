@@ -1,4 +1,4 @@
-import { InvokeFunctionExpr } from '@angular/compiler';
+//import { InvokeFunctionExpr } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { LoginService } from '../login.service';
@@ -15,9 +15,13 @@ export class LoginComponent implements OnInit {
   username: any;
   password: any;
   //@Input() loggedIn: boolean = false;
-  logInData: any;
+  logInData: any = {redirect: "/login", loggedIn: false, user: null};
   user: any;
   showPass: boolean = false;
+
+  signUpBtnName: string = "Sign Up";
+  logInBtnName: string = "Log In";
+  // nextPageText: string = "Next Page →";
 
   constructor(private _login: LoginService, private _data: DataService, private router: Router) { }
 
@@ -37,7 +41,6 @@ export class LoginComponent implements OnInit {
     if (this.logInData.loggedIn) {
       sessionStorage.setItem('currUser', JSON.stringify(this.logInData.user[0]));
     }
-    this.changeUser(this.logInData.user[0])   
 
     console.log(this.logInData);
     this.router.navigate([this.logInData.redirect]);

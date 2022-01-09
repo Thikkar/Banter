@@ -23,6 +23,8 @@ export class NewsComponent implements OnInit {
   startDate: string = '';
   endDate: string = '';
   page: number = 1;
+  nextPageText: string = "Next Page →";
+  prevPageText: string = "← Previous Page";
 
   constructor(private _http: HttpService, private _data: DataService, private _chat: ChatService) { 
     if (!this.currUser) {

@@ -19,6 +19,7 @@ import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 import { HeaderComponent } from './header/header.component';
 import { ArticlePreviewComponent } from './article-preview/article-preview.component';
+import { ButtonComponent } from './button-component/button-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ArticlePreviewComponent } from './article-preview/article-preview.compo
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
-    ArticlePreviewComponent
+    ArticlePreviewComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

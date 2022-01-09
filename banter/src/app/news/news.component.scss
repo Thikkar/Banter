@@ -96,43 +96,9 @@
     align-items: center;
     margin: auto;
 
-    .page-button {
-        margin: 1em;
-
-        button {
-            margin: 1em;
-            padding: 1em;
-            border: 3px solid black;
-            border-radius: 10px;
-            transform: scale(0.95);
-            transition: transform 1.0s, background-color 1.0s ease-out;
-            font-size: large;
-            cursor: pointer;
-        }
-        
-        button:hover {
-            &:enabled {
-                transform: scale(1.05);
-                transition: transform 1.0s, background-color color 1.0s ease-out;
-                background-color: aqua;
-                color: white;
-            }
-
-            &:disabled {
-                cursor: not-allowed
-            }
-        }
-
-        button:active:enabled {
-            color: black;
-        }
-    }
-
     span {
         margin: 1em;
         font-weight: bold;
         font-size: xx-large;
     }
-
-
 }

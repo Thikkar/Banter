@@ -21,6 +21,8 @@ export class ArticleComponent implements OnInit {
   currUser: any = JSON.parse(sessionStorage.currUser);
   
   comment: string = '';
+  backBtnName: string = "← Back to News";
+  postCommentBtnName: string = "Post Comment";
 
   constructor(private _http: HttpService, private _data: DataService, private _chat: ChatService) {
     /*

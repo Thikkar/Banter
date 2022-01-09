@@ -13,6 +13,8 @@ export class RegisterComponent implements OnInit {
   username: any;
   password: any;
   favTeam: any;
+  signUpBtnName: string = "Sign Up";
+  backBtnName: string = "← Log In";
 
   constructor(private _signup: LoginService) { }
 
