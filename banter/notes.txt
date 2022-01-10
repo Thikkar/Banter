@@ -1,0 +1,30 @@
+News Date Range Selector Code:
+
+    <!-- <mat-form-field appearance="fill">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+        <input matStartDate placeholder="Start date" [(ngModel)]="startDate">
+        <input matEndDate placeholder="End date" [(ngModel)]="endDate">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field> -->
+
+Article Preview Code without component (in news component):
+
+    <ul *ngIf="news" class="news">
+        <li *ngFor="let article of news.articles">
+            <div class="article-tile" 
+                style="background-image: url({{ article.urlToImage }})"
+                routerLink="/article/{{ article.title }}"
+                (click)="changeArticle(article)">
+
+                <div class="link-container">
+                    <a href="{{ article.url }}" target="_blank">Link</a>
+                </div>
+
+                <span class="title">{{ article.title }}</span> 
+
+            </div>
+        </li>
+    </ul>
