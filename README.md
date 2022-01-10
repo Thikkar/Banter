@@ -14,7 +14,7 @@ A Sports News Platform that displays real-time and relevant sports news content.
 
 ### Log-in and Sign-up
 
-<img src="https://user-images.githubusercontent.com/53710555/148726329-e388e8e3-3e3d-4b4b-9b3f-ba88ae231208.png" width=24.5% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148726340-1777695e-f528-456f-8500-f5b2c63fe211.png" width=24.45% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148726344-9d6da427-0107-458f-afc3-624c2a9db1d9.png" width=24.45% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148726351-050299d6-4651-4736-8870-d0cd891d008f.png" width=24.45% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148728688-bcaabd47-293f-4749-832f-d85987ad255c.jpg" width=99.3%>
+<img src="https://user-images.githubusercontent.com/53710555/148726329-e388e8e3-3e3d-4b4b-9b3f-ba88ae231208.png" width=24.1% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148726340-1777695e-f528-456f-8500-f5b2c63fe211.png" width=24.41% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148726344-9d6da427-0107-458f-afc3-624c2a9db1d9.png" width=24.41% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148726351-050299d6-4651-4736-8870-d0cd891d008f.png" width=24.41% height="135"> <img src="https://user-images.githubusercontent.com/53710555/148728688-bcaabd47-293f-4749-832f-d85987ad255c.jpg" width=99.3%>
 
 ### News Content
 
