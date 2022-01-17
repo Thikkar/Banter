@@ -8,6 +8,10 @@
         <input type="search" class="filter" [(ngModel)]="team" (ngModelChange)="ngOnInit()" placeholder="Search">
     </div>
 
+    <div *ngIf="!news" class="loader">
+        <app-loading-spinner></app-loading-spinner>
+    </div>
+
     <ul *ngIf="news" class="news">
         <li *ngFor="let article of news.articles">
             <app-article-preview [article]="article"></app-article-preview>

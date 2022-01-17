@@ -26,6 +26,13 @@
     }
 }
 
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;  
+}
+
 .news {
     list-style-type: none;
     margin: 0;

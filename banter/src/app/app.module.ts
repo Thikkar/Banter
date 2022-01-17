@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { AuthService } from './auth.service';
 import { HeaderComponent } from './header/header.component';
 import { ArticlePreviewComponent } from './article-preview/article-preview.component';
 import { ButtonComponent } from './button-component/button-component.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ButtonComponent } from './button-component/button-component.component';
     RegisterComponent,
     HeaderComponent,
     ArticlePreviewComponent,
-    ButtonComponent
+    ButtonComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { ButtonComponent } from './button-component/button-component.component';
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressSpinnerModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]

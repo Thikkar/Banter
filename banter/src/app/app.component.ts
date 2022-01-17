@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
   }
 
   @HostListener("window:scroll", []) onScroll() {
-    window.pageYOffset >= 1 ? (this.isScrolled = true) : (this.isScrolled = false);
+    window.pageYOffset >= 50 ? (this.isScrolled = true) : (this.isScrolled = false);
   }
   
   
